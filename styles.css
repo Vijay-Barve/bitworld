@@ -457,7 +457,52 @@ h2 {
   line-height: 1.5;
 }
 
-/* Why us */
+.service-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.service-list li {
+  margin-bottom: 0.25rem;
+}
+
+.pioneers-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--bg-alt);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent);
+}
+
+.pioneers-title {
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--text);
+  margin: 0 0 0.5rem;
+}
+
+.pioneers-box p {
+  margin: 0 0 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.pioneers-cta {
+  margin-top: 0.5rem;
+}
+
+.services-cta-wrap {
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
+/* Why us / About why */
+.about-why {
+  margin-top: 0.5rem;
+}
 .why-grid {
   list-style: none;
   margin: 0;
@@ -485,7 +530,149 @@ h2 {
   background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
 }
 
-/* Portfolio */
+/* Industries */
+.industries-intro {
+  color: var(--text-muted);
+  margin: 0 0 2rem;
+  max-width: 560px;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.industry-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.industry-card:hover {
+  border-color: var(--accent-light);
+  box-shadow: var(--shadow);
+}
+
+.industry-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  color: var(--text);
+}
+
+.industry-card p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.industries-cta {
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
+/* Clients & Testimonials */
+.clients-intro {
+  color: var(--text-muted);
+  margin: 0 0 2rem;
+  max-width: 560px;
+}
+
+.clients-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.client-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.client-item strong {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.client-item span {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.testimonials-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  color: var(--text);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial-card {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--accent);
+}
+
+.testimonial-card p {
+  margin: 0 0 0.75rem;
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  font-style: italic;
+}
+
+.testimonial-card cite {
+  font-size: 0.8125rem;
+  color: var(--text-subtle);
+  font-style: normal;
+}
+
+.clients-cta {
+  text-align: center;
+  margin: 0;
+}
+
+/* Careers */
+.careers-intro {
+  color: var(--text-muted);
+  margin: 0 0 1.5rem;
+  max-width: 560px;
+}
+
+.careers-list {
+  margin: 0 0 1.5rem;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.contact-info .contact-lead {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* Portfolio (kept for any legacy) */
 .portfolio-intro {
   color: var(--text-muted);
   margin: 0 0 2rem;
@@ -832,6 +1019,23 @@ h2 {
 
 .ebook-download-btn {
   margin-top: 0.25rem;
+}
+
+.ebook-error {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.ebook-error-msg {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.ebook-error-msg a {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 /* Mobile */

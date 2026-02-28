@@ -39,6 +39,7 @@
   var ebookClose = document.getElementById('ebook-modal-close');
   var ebookForm = document.getElementById('ebook-form');
   var ebookSuccess = document.getElementById('ebook-success');
+  var ebookError = document.getElementById('ebook-error');
 
   function openEbookModal() {
     if (ebookModal) {
@@ -50,6 +51,7 @@
         ebookForm.reset();
       }
       if (ebookSuccess) ebookSuccess.hidden = true;
+      if (ebookError) ebookError.hidden = true;
     }
   }
 
@@ -107,14 +109,18 @@
         .then(function (response) {
           if (response.ok) {
             ebookForm.hidden = true;
+            if (ebookError) ebookError.hidden = true;
             if (ebookSuccess) ebookSuccess.hidden = false;
           } else {
-            throw new Error('Send failed');
+            ebookForm.hidden = false;
+            if (ebookSuccess) ebookSuccess.hidden = true;
+            if (ebookError) ebookError.hidden = false;
           }
         })
         .catch(function () {
-          ebookForm.hidden = true;
-          if (ebookSuccess) ebookSuccess.hidden = false;
+          ebookForm.hidden = false;
+          if (ebookSuccess) ebookSuccess.hidden = true;
+          if (ebookError) ebookError.hidden = false;
         })
         .finally(function () {
           if (submitBtn) {
