@@ -33,7 +33,6 @@
   }
 
   /* Ebook modal: collect name, email, phone then show download */
-  var ebookBtn = document.getElementById('hero-ebook-btn');
   var ebookModal = document.getElementById('ebook-modal');
   var ebookBackdrop = document.getElementById('ebook-modal-backdrop');
   var ebookClose = document.getElementById('ebook-modal-close');
@@ -41,7 +40,8 @@
   var ebookSuccess = document.getElementById('ebook-success');
   var ebookError = document.getElementById('ebook-error');
 
-  function openEbookModal() {
+  function openEbookModal(e) {
+    if (e && e.preventDefault) e.preventDefault();
     if (ebookModal) {
       ebookModal.classList.add('is-open');
       ebookModal.setAttribute('aria-hidden', 'false');
@@ -53,6 +53,8 @@
       if (ebookSuccess) ebookSuccess.hidden = true;
       if (ebookError) ebookError.hidden = true;
     }
+    if (nav) nav.classList.remove('is-open');
+    if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
   }
 
   function closeEbookModal() {
@@ -63,9 +65,9 @@
     }
   }
 
-  if (ebookBtn) {
-    ebookBtn.addEventListener('click', openEbookModal);
-  }
+  document.querySelectorAll('.js-open-ebook-modal').forEach(function (el) {
+    el.addEventListener('click', openEbookModal);
+  });
   if (ebookBackdrop) {
     ebookBackdrop.addEventListener('click', closeEbookModal);
   }
